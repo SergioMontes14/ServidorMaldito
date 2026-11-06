@@ -1,0 +1,117 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/heart.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/items/key.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/items/vial.png" id="4"]
+[ext_resource type="Texture2D" path="res://assets/items/disk.png" id="5"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1")
+
+[node name="Hearts" type="HBoxContainer" parent="."]
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 88.0
+offset_bottom = 24.0
+theme_override_constants/separation = 2
+
+[node name="Heart1" type="TextureRect" parent="Hearts"]
+layout_mode = 2
+texture = ExtResource("2")
+
+[node name="Heart2" type="TextureRect" parent="Hearts"]
+layout_mode = 2
+texture = ExtResource("2")
+
+[node name="Heart3" type="TextureRect" parent="Hearts"]
+layout_mode = 2
+texture = ExtResource("2")
+
+[node name="Heart4" type="TextureRect" parent="Hearts"]
+layout_mode = 2
+texture = ExtResource("2")
+
+[node name="Heart5" type="TextureRect" parent="Hearts"]
+layout_mode = 2
+texture = ExtResource("2")
+
+[node name="Items" type="HBoxContainer" parent="."]
+anchors_preset = 0
+offset_left = 400.0
+offset_top = 6.0
+offset_right = 632.0
+offset_bottom = 28.0
+theme_override_constants/separation = 4
+
+[node name="ItemText" type="Label" parent="Items"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "ITEM"
+
+[node name="KeySlot" type="TextureRect" parent="Items"]
+layout_mode = 2
+texture = ExtResource("3")
+
+[node name="VialSlot" type="TextureRect" parent="Items"]
+layout_mode = 2
+texture = ExtResource("4")
+
+[node name="VialCount" type="Label" parent="Items"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "x0"
+
+[node name="DiskSlot" type="TextureRect" parent="Items"]
+layout_mode = 2
+texture = ExtResource("5")
+
+[node name="DiskCount" type="Label" parent="Items"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "0/3"
+
+[node name="Message" type="Label" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 100.0
+offset_top = 90.0
+offset_right = 540.0
+offset_bottom = 230.0
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="BossBar" type="ProgressBar" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 100.0
+offset_top = 8.0
+offset_right = 390.0
+offset_bottom = 20.0
+max_value = 40.0
+value = 40.0
+show_percentage = false
+
+[node name="InfoBg" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 40.0
+offset_top = 288.0
+offset_right = 600.0
+offset_bottom = 344.0
+color = Color(0, 0, 0, 0.7)
+
+[node name="Info" type="Label" parent="."]
+visible = false
+anchors_preset = 0
+offset_left = 48.0
+offset_top = 290.0
+offset_right = 592.0
+offset_bottom = 342.0
+theme_override_font_sizes/font_size = 13
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

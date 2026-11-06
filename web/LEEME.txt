@@ -1,0 +1,3 @@
+Esta carpeta contiene la exportacion Web del juego (la que publica Vercel).
+Generela desde Godot: Proyecto > Exportar > Web > "Exportar proyecto" y guarde como web/index.html
+Luego haga commit y push de esta carpeta (vea README.md).
